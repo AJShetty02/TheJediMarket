@@ -1,0 +1,468 @@
+/* ------------------------------------------------------------------------------ */
+/* ------------------------------ HOME PAGE-------------------------------------- */
+/* ------------------------------------------------------------------------------ */
+
+/* General Setting of the Homepage */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial',sans-serif;
+    text-shadow: 2px 2px 5px grey;
+}
+
+/* Setting the background image of the body of the web page */
+body {
+    background-image: url('images/stars.jpeg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 1;
+    height: 1000px;
+}
+
+/* Setting the background of the header */
+header {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:125px;
+    position:relative;
+    width: inherit;
+}
+
+/* Defines the characteristics of h2 elements */
+h2 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+/* Defines the characteristics of h2 elements */
+h3 {
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-size: 15px;
+}
+
+/* Defines the characteristics the header container elements*/
+.overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10,10,10,0.3);
+}
+
+/* Defines the characteristics the nav elements */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;    
+}
+
+/* Defines the characteristics of the list inside the nav element */
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Defines the characteristics of the span in the list inside the nav element */
+nav li span {
+    padding-left: 5px;
+}
+
+/* Defines the characteristics links in the list */
+li a{
+    padding: 5px;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Audiowide", sans-serif;
+}
+
+/* Defines the characteristics of the cart ion-icon */
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+/* Defines the characteristics and visual designs the cart */
+.cart {
+    background-color: #f9484a;
+    background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Audiowide", sans-serif;
+    padding: 5px;
+}
+
+/* Removes the styling of the modal button */
+.cartbutton{
+    background: none;
+    all: unset;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* --------------------------THE MODAL (BACKGROUND)------------------------------ */
+/* ------------------------------------------------------------------------------ */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+/* ------------------------------------------------------------------------------ */
+/* --------------------------SLIDER/CAROUSEL SECTION----------------------------- */
+/* ------------------------------------------------------------------------------ */
+
+/* Defines the total size of the carousel section */
+#carousel {
+	margin: 0 auto;
+	height: 350px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Defines the dimension and position of the carousel div */
+.carousel-content {
+	margin: auto;
+	width: 190px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+
+/* Defines the position and animation type of the carousel */
+.carousel-items {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 15s infinite linear;
+	transform-style: preserve-3d;
+}
+
+/* Defines the actions when the mouse hovers above the carousel */
+.carousel-items:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+/* Defines the dimensions and characteristics of the carousel images */
+.carousel-items figure {
+	width: 100%;
+	height: 150px;
+	border: 2px solid #ffffff;
+	overflow: hidden;
+	position: absolute;
+}
+
+/* Rotation of the carousel items per image */
+.carousel-items figure:nth-child(1) {
+	transform: rotateY(0deg) translateZ(300px); 
+} .carousel-items figure:nth-child(2) {
+	transform: rotateY(40deg) translateZ(300px); 
+} .carousel-items figure:nth-child(3) {
+	transform: rotateY(80deg) translateZ(300px); 
+} .carousel-items figure:nth-child(4) {
+	transform: rotateY(120deg) translateZ(300px); 
+} .carousel-items figure:nth-child(5) {
+	transform: rotateY(160deg) translateZ(300px); 
+} .carousel-items figure:nth-child(6) {
+	transform: rotateY(200deg) translateZ(300px); 
+} .carousel-items figure:nth-child(7) {
+	transform: rotateY(240deg) translateZ(300px); 
+} .carousel-items figure:nth-child(8) {
+	transform: rotateY(280deg) translateZ(300px); 
+} .carousel-items figure:nth-child(9) {
+	transform: rotateY(320deg) translateZ(300px); 
+} .carousel-items figure:nth-child(10) {
+	transform: rotateY(360deg) translateZ(300px); 
+} 
+
+/* Puts shadow design around the carousel pictures */
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px grey;
+    border-radius: 1px;
+}
+
+/* Defines the characteristics and renderin of the carousel images */
+.carousel-items img {
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
+}
+
+/* Defines the actions when the mouse hovers on the carousel */
+.carousel-items img:hover {
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+/* The carousel rotates at 360 degrees */
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}
+
+/* Defines the action when the mouse hovers over the Lightsaber Hilts title */
+.force:hover {
+    transform: scale(1.2);
+}
+
+/* Defines the characteristics of the Lightsaber Hilts title */
+.force {
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px white;
+    transition: transform 1s;
+    margin-left: 100px;
+}
+
+/* Defines the characteristics/dimensions of the product item images */
+.image {
+    margin: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Defines the characteristics of the add to cart button per items */
+.add-cart {
+    position:absolute;
+    width: 100%;
+    background-color: #f9484a;
+    background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+    transition: all 0.3s ease-in-out;
+    opacity:1;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    font-family: "Audiowide", sans-serif;
+}
+
+/* Defines the actions when the mouse hovers over the product images */
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4,
+.image:hover .cart5,
+.image:hover .cart6,
+.image:hover .cart7,
+.image:hover .cart8,
+.image:hover .cart9,
+.image:hover .cart10 {
+    bottom: 50px;
+    opacity: 2;
+    padding: 5px;
+    padding-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    /* gradient design of the add to cart button */
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------------MODAL CONTENTS------------------------------- */
+/* ------------------------------------------------------------------------------ */
+
+/* Modal Content characteristics*/
+.modal-content {
+    background: url(./images/millennium.jpg) ;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-shadow: 5px 5px 10px yellow;
+}
+  
+/* The Close Button  characteristics*/
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+/* Defines the actions when the mouse hovers the close button of the modal */
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Defines the action when the mouse hovers the cart and home button */
+.cart:hover,
+.home:hover {
+    transform: scale(1.5);
+    transition: 0.3s ease;
+}
+
+/* Defines the characteristics of the div container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: inherit;
+    height: inherit;
+}
+
+/* Modal Cart content container characteristics */
+.products-container {
+    max-width: 75%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #ffffff;
+}
+
+/* Modal Cart header */
+.product-header {
+    width: 95%;
+    max-width: 958px;
+    display: flex;
+    position: absolute;
+    border-bottom: 5px solid lightgrey;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/* Header product title */
+.product-title {
+    width: 30%;
+}
+
+/* Price header */
+.price {
+    width: 30%;
+    display:flex;
+    align-items: center; 
+    margin: auto;
+}
+
+/* Quantity header */
+.quantity {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+/* Total header */
+.total{
+    width: 10%;
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end; 
+    margin: auto;
+}
+
+/* Product container */
+.product {
+    width: 45%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+/* Products div container characteristic */
+.products {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    max-width: 100% ;
+}
+
+/* Product items images in cart characteristic */
+.product-items {
+    max-height: 90px;
+    border-radius:10px;
+} 
+
+/* Defines the action when the mouse hovers over the Basket Total container */
+.basketTotalContainer:hover {
+    color: green;
+}
+
+/* Defines the characteristics of the product name */
+.productName {
+    margin: auto;
+    word-wrap: break-word;
+    max-width: 45%;
+}
+
+/* Defines the characteristic of the basket total container */
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+    margin-top:20px;
+    border-top: 5px solid whitesmoke;
+}
+
+/* Defines the Basket Total title width */
+.basketTotalTitle {
+    width: 30%;
+}
+
+/* Defines the Basket total price width */
+.basketTotal {
+    width: 10%;
+}
+

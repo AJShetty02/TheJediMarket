@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Standard HTML template in visual studio code -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links of the stylesheet and ion-icons used in the webpage -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Title of the webpage seen in the title bar of the browser -->
+    <title>🌟The Jedi Market🌟</title>
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>🌟THE JEDI MARKET🌟</h2>
+            <ul>
+                <!-- Home and add to cart button of the webpage -->
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="cart">
+                        <!-- Triggers/open the modal as well as the cart ion-icon -->
+                        <ion-icon name="basket"></ion-icon><button id="myBtn" class="cartbutton">Cart</button><span>0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+
+       <!-- Modal content -->
+       <div class="modal-content">
+            <span class="close">&times;</span>    
+
+            <!-- Cart page -->
+            <div class="container-products">
+                <div class="product-header">
+                    <h4 class="product-title">PRODUCT</h4>
+                    <h4 class="price sm-hide">PRICE</h4>
+                    <h4 class="quantity">QUANTITY</h4>
+                    <h4 class="total">TOTAL</h4>
+                </div>
+                <br><br>
+                <div class="products">
+                </div>
+           </div>
+
+        </div>
+
+    </div>
+
+    <!-- Carousel slider images -->
+    <section id="carousel">
+        <div class="carousel-content">
+            <div class="carousel-items">
+                <figure class="shadow"><img src="./images/Slider/1starwarsslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/2starwarscharslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/6anakinslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/7lukeslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/9obi-wanslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/10yodaslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/8leiaslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/13darthmaulslider.jpg"/></figure>
+                <figure class="shadow"><img src="./images/Slider/15kyloslider.jpg"/></figure>
+              </div>
+        </div>
+    </section>
+    
+    <div>
+        <h1 class="force">LIGHTSABER HILTS</h1>
+    </div>
+
+    <!-- Product Items list -->
+    <div class="container">
+        <!-- Anakin Skywalker Lightsaber -->
+        <div class="image">
+            <img src="images/anakin.jpg" alt="anakinskywalker">
+            <h3>Anakin Skywalker's Lightsaber</h3>
+            <h3>₱26,169.00</h3>
+            <a class="add-cart cart1" href="#">Add to Cart</a>
+            <input type="hidden" value="26169" />
+        </div>
+        <!-- Luke Skywalker Lightsaber -->
+        <div class="image">
+            <img src="images/luke.jpg" alt="lukeskywalker">
+            <h3>Luke Skywalker's Lightsaber</h3>
+            <h3>₱23,366.00</h3>
+            <a class="add-cart cart2" href="#">Add to Cart</a>
+            <input type="hidden" value="23366" />
+        </div>
+        <!-- Princess Leia Lightsaber -->
+        <div class="image">
+            <img src="images/leia.jpg" alt="princessleia">
+            <h3>Princess Leia's Lightsaber</h3>
+            <h3>₱12,698.00</h3>
+            <a class="add-cart cart3" href="#">Add to Cart</a>
+            <input type="hidden" value="12698" />
+        </div>
+        <!-- Obi-Wan Kenobi Lightsaber -->
+        <div class="image">
+            <img src="images/obi-wan.jpg" alt="obi-wan">
+            <h3>Obi-Wan Kenobi's Lightsaber</h3>
+            <h3>₱26,412.00</h3>
+            <a class="add-cart cart4" href="#">Add to Cart</a>
+            <input type="hidden" value="26412" />
+        </div>
+        <!-- Emperor Palpatine Lightsaber -->
+        <div class="image">
+            <img src="images/palpatine.jpg" alt="palpatine">
+            <h3>Emperor Palpatine's Lightsaber</h3>
+            <h3>₱2,910.00</h3>
+            <a class="add-cart cart5" href="#">Add to Cart</a>
+            <input type="hidden" value="2910" />
+        </div>
+        <div class="image">
+            <img src="images/yoda.jpg" alt="yoda">
+            <h3>Master Yoda's Lightsaber</h3>
+            <h3>₱4,247.00</h3>
+            <a class="add-cart cart6" href="#">Add to Cart</a>
+            <input type="hidden" value="4247" />
+        </div>
+        <div class="image">
+            <img src="images/dooku.jpg" alt="dooku">
+            <h3>Count Dooku's Lightsaber</h3>
+            <h3>₱7,861.00</h3>
+            <a class="add-cart cart7" href="#">Add to Cart</a>
+            <input type="hidden" value="7861" />
+        </div>
+        <div class="image">
+            <img src="images/mace.jpg" alt="macewindu">
+            <h3>Mace Windu's Lightsaber</h3>
+            <h3>₱61,240.00</h3>
+            <a class="add-cart cart8" href="#">Add to Cart</a>
+            <input type="hidden" value="61240" />
+        </div>
+        <div class="image">
+            <img src="images/kylo.jpg" alt="kylo">
+            <h3>Kylo Ren Solo's Lightsaber</h3>
+            <h3>₱5,398.00</h3>
+            <a class="add-cart cart9" href="#">Add to Cart</a>
+            <input type="hidden" value="5398" />
+        </div>
+        <div class="image">
+            <img src="images/darthmaul.jpg" alt="darthmaul">
+            <h3>Darth Maul's Lightsaber</h3>
+            <h3>₱2,267.00</h3>
+            <a class="add-cart cart10" href="#">Add to Cart</a>
+            <input type="hidden" value="2267" />
+        </div>
+
+    </div>
+
+    <!-- Scripts used -->
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</body>
+</html>
